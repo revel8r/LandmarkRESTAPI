@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{932D072E-B223-41A3-A901-EEF82812155C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Revel8R.Landmark.Repositories</RootNamespace>
+    <AssemblyName>Revel8R.Landmark.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LandmarkRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Revel8R.BusinessEntities\Revel8R.BusinessEntities.csproj">
+      <Project>{D70B9AA6-BD70-4A71-B8B2-94337831C3A5}</Project>
+      <Name>Revel8R.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Revel8R.DataAccess\Revel8R.DataAccess.csproj">
+      <Project>{50C206F8-C612-48EA-984E-1060AA56AE56}</Project>
+      <Name>Revel8R.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Revel8R.Landmark.BusinessEntities\Revel8R.Landmark.BusinessEntities.csproj">
+      <Project>{4125342a-9140-4a3a-af91-2caeb11a0bc7}</Project>
+      <Name>Revel8R.Landmark.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Revel8R.Landmark.DataSource\Revel8R.Landmark.DataSource.csproj">
+      <Project>{3A639D4A-E7BD-48C1-8555-982C55726F25}</Project>
+      <Name>Revel8R.Landmark.DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Revel8R.Repositories\Revel8R.Repositories.csproj">
+      <Project>{4474e707-cf20-47cf-96a0-302230caf42a}</Project>
+      <Name>Revel8R.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
